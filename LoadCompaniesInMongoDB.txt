@@ -1,0 +1,7 @@
+use companies;
+db.leancompanies.save({"companyname": "Kronos Incorporated","city": "Chelmsford","state": "MA","zip": "01824"});
+db.leancompanies.save({"companyname": "TechMATCH Pro","city": "New York","state": "NY","zip": "10001"});
+db.leancompanies.save({"companyname": "The Lean Companies","city": "Wayne","state": "PA","zip": "19087"});
+db.leancompanies.save({"companyname": "Deacom, Inc","city": "Chelmsford","state": "MA","zip": "01824"});
+db.leancompanies.find();
+
