@@ -4,13 +4,15 @@
 
 function LeanCompanyListCtrl($scope, $http) {
   
+  // List company method using GET
   $http.get('/leancompanies').success(function(data) {
     $scope.leancompanies = data;
   });
 
   $scope.addLeanCompany = function() {
-      var newleancompany = { "companyname": $scope.companynametext, "city": $scope.citytext, "state": $scope.statetext, "zip": $scope.zip };
+      var newleancompany = { "companyname": $scope.companynametext, "city": $scope.citytext, "state": $scope.statetext, "zip": $scope.ziptext };
 
+     // Add company method using POST
   	 $http({
   	     url: '/addleancompany',
         method: "POST",
@@ -21,7 +23,7 @@ function LeanCompanyListCtrl($scope, $http) {
              $scope.companynametext = '';
              $scope.citytext = '';
              $scope.statetext = '';
-             $scope.zip = '';
+             $scope.ziptext = '';
       }).error(function (data, status, headers, config) {
             
       });
